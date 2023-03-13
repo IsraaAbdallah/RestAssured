@@ -1,0 +1,917 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/20/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Feb 09 23:04:50 EET 2023</td>
+</tr>
+<tr><td>Total time:</td><td>17 seconds (17199 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='CarTests.get_CarData()'><b>get_CarData</b><br>Test class: CarTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at CarTests.get_CarData(CarTests.java:68)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace497479191", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace497479191'><pre>java.lang.NullPointerException
+	at CarTests.get_CarData(CarTests.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>CarTests@62ee68d8</td></tr>
+<tr>
+<td title='SupportTests.get_SupportData()'><b>get_SupportData</b><br>Test class: SupportTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at SupportTests.get_SupportData(SupportTests.java:71)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace880533231", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace880533231'><pre>java.lang.NullPointerException
+	at SupportTests.get_SupportData(SupportTests.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>SupportTests@735b5592</td></tr>
+<tr>
+<td title='ReviewsTests.get_reviewData()'><b>get_reviewData</b><br>Test class: ReviewsTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at ReviewsTests.get_reviewData(ReviewsTests.java:69)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1744713739", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1744713739'><pre>java.lang.NullPointerException
+	at ReviewsTests.get_reviewData(ReviewsTests.java:69)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>ReviewsTests@58651fd0</td></tr>
+<tr>
+<td title='CarTests.modify_carData()'><b>modify_carData</b><br>Test class: CarTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at CarTests.modify_carData(CarTests.java:57)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace467401150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace467401150'><pre>java.lang.NullPointerException
+	at CarTests.modify_carData(CarTests.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>CarTests@62ee68d8</td></tr>
+<tr>
+<td title='ReviewsTests.modify_reviewData()'><b>modify_reviewData</b><br>Test class: ReviewsTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at ReviewsTests.modify_reviewData(ReviewsTests.java:58)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1442077586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1442077586'><pre>java.lang.NullPointerException
+	at ReviewsTests.modify_reviewData(ReviewsTests.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>ReviewsTests@58651fd0</td></tr>
+<tr>
+<td title='SupportTests.modify_supportMemberInfo()'><b>modify_supportMemberInfo</b><br>Test class: SupportTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at SupportTests.modify_supportMemberInfo(SupportTests.java:60)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace78265654", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace78265654'><pre>java.lang.NullPointerException
+	at SupportTests.modify_supportMemberInfo(SupportTests.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>SupportTests@735b5592</td></tr>
+<tr>
+<td title='CarTests.test_addCar()'><b>test_addCar</b><br>Test class: CarTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at CarTests.test_addCar(CarTests.java:25)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1691629865", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1691629865'><pre>java.lang.NullPointerException
+	at CarTests.test_addCar(CarTests.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>CarTests@62ee68d8</td></tr>
+<tr>
+<td title='ReviewsTests.test_addReview()'><b>test_addReview</b><br>Test class: ReviewsTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at ReviewsTests.test_addReview(ReviewsTests.java:27)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace604060129", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace604060129'><pre>java.lang.NullPointerException
+	at ReviewsTests.test_addReview(ReviewsTests.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>ReviewsTests@58651fd0</td></tr>
+<tr>
+<td title='SupportTests.test_addSupportMember()'><b>test_addSupportMember</b><br>Test class: SupportTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at SupportTests.test_addSupportMember(SupportTests.java:29)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace368153528", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace368153528'><pre>java.lang.NullPointerException
+	at SupportTests.test_addSupportMember(SupportTests.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>SupportTests@735b5592</td></tr>
+<tr>
+<td title='CarTests.test_deleteCar_by_id()'><b>test_deleteCar_by_id</b><br>Test class: CarTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at CarTests.test_deleteCar_by_id(CarTests.java:36)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1132379993", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1132379993'><pre>java.lang.NullPointerException
+	at CarTests.test_deleteCar_by_id(CarTests.java:36)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>CarTests@62ee68d8</td></tr>
+<tr>
+<td title='ReviewsTests.test_deleteReview_by_id()'><b>test_deleteReview_by_id</b><br>Test class: ReviewsTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at ReviewsTests.test_deleteReview_by_id(ReviewsTests.java:38)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1227459815", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1227459815'><pre>java.lang.NullPointerException
+	at ReviewsTests.test_deleteReview_by_id(ReviewsTests.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>ReviewsTests@58651fd0</td></tr>
+<tr>
+<td title='SupportTests.test_deleteSupportMember_by_id()'><b>test_deleteSupportMember_by_id</b><br>Test class: SupportTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at SupportTests.test_deleteSupportMember_by_id(SupportTests.java:40)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace810196347", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace810196347'><pre>java.lang.NullPointerException
+	at SupportTests.test_deleteSupportMember_by_id(SupportTests.java:40)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>SupportTests@735b5592</td></tr>
+<tr>
+<td title='UserTests.test_delete_user()'><b>test_delete_user</b><br>Test class: UserTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at UserTests.test_delete_user(UserTests.java:50)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace44278425", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace44278425'><pre>java.lang.NullPointerException
+	at UserTests.test_delete_user(UserTests.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>UserTests@9629756</td></tr>
+<tr>
+<td title='CarTests.update_CarData()'><b>update_CarData</b><br>Test class: CarTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at CarTests.update_CarData(CarTests.java:45)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace68217166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace68217166'><pre>java.lang.NullPointerException
+	at CarTests.update_CarData(CarTests.java:45)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>CarTests@62ee68d8</td></tr>
+<tr>
+<td title='SupportTests.update_SupportMemberData()'><b>update_SupportMemberData</b><br>Test class: SupportTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at SupportTests.update_SupportMemberData(SupportTests.java:49)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1921553024", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1921553024'><pre>java.lang.NullPointerException
+	at SupportTests.update_SupportMemberData(SupportTests.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>SupportTests@735b5592</td></tr>
+<tr>
+<td title='ReviewsTests.update_reviewData()'><b>update_reviewData</b><br>Test class: ReviewsTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at ReviewsTests.update_reviewData(ReviewsTests.java:47)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace148891937", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace148891937'><pre>java.lang.NullPointerException
+	at ReviewsTests.update_reviewData(ReviewsTests.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>ReviewsTests@58651fd0</td></tr>
+<tr>
+<td title='UserTests.update_userInfo()'><b>update_userInfo</b><br>Test class: UserTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at UserTests.update_userInfo(UserTests.java:59)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace353206468", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace353206468'><pre>java.lang.NullPointerException
+	at UserTests.update_userInfo(UserTests.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>UserTests@9629756</td></tr>
+<tr>
+<td title='CarTests.validate_response_CarInfo()'><b>validate_response_CarInfo</b><br>Test class: CarTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at CarTests.validate_response_CarInfo(CarTests.java:76)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1015122628", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1015122628'><pre>java.lang.NullPointerException
+	at CarTests.validate_response_CarInfo(CarTests.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>CarTests@62ee68d8</td></tr>
+<tr>
+<td title='SupportTests.validate_response_reviewData()'><b>validate_response_reviewData</b><br>Test class: SupportTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at SupportTests.validate_response_reviewData(SupportTests.java:79)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2134157671", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2134157671'><pre>java.lang.NullPointerException
+	at SupportTests.validate_response_reviewData(SupportTests.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>SupportTests@735b5592</td></tr>
+<tr>
+<td title='ReviewsTests.validate_response_reviewData()'><b>validate_response_reviewData</b><br>Test class: ReviewsTests</td>
+<td><div><pre>java.lang.NullPointerException
+	at ReviewsTests.validate_response_reviewData(ReviewsTests.java:77)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1038988454", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1038988454'><pre>java.lang.NullPointerException
+	at ReviewsTests.validate_response_reviewData(ReviewsTests.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>0</td>
+<td>ReviewsTests@58651fd0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='UserTests.login()'><b>login</b><br>Test class: UserTests</td>
+<td></td>
+<td>0</td>
+<td>UserTests@9629756</td></tr>
+<tr>
+<td title='Authentication.testAPIKeyAuthentication()'><b>testAPIKeyAuthentication</b><br>Test class: Authentication</td>
+<td></td>
+<td>5</td>
+<td>Authentication@7f9a81e8</td></tr>
+<tr>
+<td title='Authentication.testBasicAuthentication()'><b>testBasicAuthentication</b><br>Test class: Authentication</td>
+<td></td>
+<td>2</td>
+<td>Authentication@7f9a81e8</td></tr>
+<tr>
+<td title='Authentication.testKeyAuthentication()'><b>testKeyAuthentication</b><br>Test class: Authentication</td>
+<td></td>
+<td>2</td>
+<td>Authentication@7f9a81e8</td></tr>
+<tr>
+<td title='UserTests.test_signUp()'><b>test_signUp</b><br>Test class: UserTests</td>
+<td></td>
+<td>2</td>
+<td>UserTests@9629756</td></tr>
+<tr>
+<td title='UserTests.verifyNoDuplicatedAccounts()'><b>verifyNoDuplicatedAccounts</b><br>Test class: UserTests</td>
+<td></td>
+<td>3</td>
+<td>UserTests@9629756</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "brandModel": "Nissan Qashqai (2013)",
+  "color": "Brown",
+  "type": "SUV",
+  "price": "380,000",
+  "description": "Used car in good condition, payment is in cash only",
+  "location": "Downtown Cairo, Cairo",
+  "engineCapacity": "1600",
+  "kilometers": "100000 to 119999",
+  "Available Car Spare Parts": {
+    "Type": "Front bumper",
+    "Condition": "New",
+    "Price": "2,274 EGP"
+  }
+}
