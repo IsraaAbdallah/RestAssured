@@ -12,7 +12,7 @@ public class Base {
 
     @BeforeTest
     public void base()  {
-        request = RestAssured.given().baseUri("http://localhost:3000");
+        request = new RequestSpecBuilder().setBaseUri("http://localhost:3000").build();
     }
 
 
